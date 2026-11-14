@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Atlas Kanto · Guia de campo Pokémon</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="atlas.js" defer></script>
+</head>
+<body>
+  <header><div class="marca"><i aria-hidden="true"></i> Atlas Kanto</div><a href="#colecao">Explorar fichas ↓</a></header>
+  <main>
+    <section class="capa"><p class="rotulo">POKÉDEX REGIONAL &nbsp; / &nbsp; KANTO</p>
+      <h1>Guia de campo<span>.</span></h1>
+      <p>Dos parceiros iniciais aos encontros pela floresta, conheça os Pokémon que marcaram as aventuras de Ash em Kanto.</p>
+    </section>
+    <section id="colecao" aria-labelledby="titulo">
+      <div class="barra"><h2 id="titulo">Fichas de espécies</h2><label>Seleção <select id="grupo"><option value="iniciais">Primeiros parceiros</option><option value="floresta">Na floresta</option></select></label></div>
+      <p id="estado" role="status"></p><button id="repetir" hidden>Tentar novamente</button><div id="fichas"></div>
+    </section>
+  </main>
+  <footer>Atlas Kanto · Projeto acadêmico <a href="https://pokeapi.co/docs/v2">Dados da PokéAPI ↗</a></footer>
+</body>
+</html>

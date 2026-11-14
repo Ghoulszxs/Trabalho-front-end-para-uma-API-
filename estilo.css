@@ -1,0 +1,32 @@
+* { box-sizing: border-box }
+:root { color-scheme: light; --ink: #172f29; --paper: #f8f6ed; --line: #cbcfc0 }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.5 "Segoe UI",sans-serif }
+header, main, footer { width: min(1180px,92%); margin: auto }
+header, footer, .barra { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px }
+header { padding: 18px 0; border-bottom: 1px solid var(--line) }
+.marca { font-weight: 800; font-size: 21px; display:flex; align-items:center; gap:10px }
+.marca i { width:25px; height:25px; border-radius:50%; background:linear-gradient(#d65a38 44%,var(--ink) 44% 56%,#fff 56%); border:2px solid var(--ink) }
+a { color: inherit; text-underline-offset: 4px }
+.capa { position:relative; isolation:isolate; overflow:hidden; background:#193f34; color:#fffced; border-radius:10px; padding:clamp(22px,4vw,52px); margin:26px 0 34px }
+.capa::after { content:""; position:absolute; z-index:-1; inset:0 0 0 50%; opacity:.35; background:repeating-radial-gradient(ellipse at 110% 120%, transparent 0 20px,#acc6a0 21px 22px,transparent 23px 34px); mask-image:linear-gradient(90deg,transparent,#000) }
+.rotulo, .numero { font: bold 12px/1.5 Consolas,monospace; letter-spacing:.12em }
+.capa p { max-width:570px; margin:0 }
+h1,h2,h3 { font-family:Georgia,serif; line-height:1.05 }
+h1 { font-size:clamp(42px,7vw,84px); letter-spacing:-.055em; margin:14px 0 }
+h1 span { color:#ffb45a }
+h2 { font-size:clamp(26px,4vw,38px); margin:0 }
+select, button { color:var(--ink); background:#fffdf7; font:inherit; padding:8px 12px; border:1px solid #818f81; border-radius:5px }
+button { cursor:pointer; margin-bottom:12px }
+:focus-visible { outline:3px solid #ae4409; outline-offset:3px }
+#estado { font-size:14px; color:#48594d }
+#fichas { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,225px),1fr)); gap:16px }
+article { background:#fffef8; border:1px solid var(--line); border-radius:8px; overflow:hidden }
+.foto { background-color:#dae6d9; background-image:radial-gradient(#58644b40 1px,transparent 1px); background-size:9px 9px; position:relative; display:grid; place-items:center; height:170px }
+.fire { background-color:#f2d6c2 }.water { background-color:#d4e6ec }.electric { background-color:#f3e6af }
+.numero { position:absolute; top:10px; left:12px }
+img { width:145px; height:145px; object-fit:contain }
+.dados { padding:16px }.dados h3 { margin:0 0 8px; font-size:27px }
+.tipo { font-weight:650; color:#46634e; margin:0 }
+.medidas { border-top:1px solid var(--line); padding-top:9px; margin:12px 0 0; font-size:14px }
+footer { margin-top:36px; padding:16px 0; border-top:1px solid var(--line); font-size:13px }
+@media(max-width:500px){header a{font-size:14px}.capa{margin:16px 0 24px}.barra{align-items:flex-start;flex-direction:column}}
